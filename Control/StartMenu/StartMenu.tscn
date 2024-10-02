@@ -1,0 +1,181 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Control/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Control/StartMenu/Play.gd" type="Script" id=2]
+[ext_resource path="res://Control/StartMenu/Explanations.gd" type="Script" id=3]
+[ext_resource path="res://Control/StartMenu/Button.gd" type="Script" id=4]
+[ext_resource path="res://Control/StartMenu/Quit.gd" type="Script" id=5]
+[ext_resource path="res://Control/StartMenu/Leaves.png" type="Texture" id=6]
+[ext_resource path="res://Control/StartMenu/Trunk.png" type="Texture" id=7]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+void vertex() {
+	VERTEX.x += cos(TIME + VERTEX.y + VERTEX.x) * 2.5;
+	VERTEX.y += sin(TIME + VERTEX.y + VERTEX.x) * 2.5;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Shader" id=9]
+code = "shader_type canvas_item;
+
+void vertex() {
+	VERTEX.y += sin(TIME + VERTEX.y + VERTEX.x) * 5.0;
+}"
+
+[sub_resource type="ShaderMaterial" id=10]
+shader = SubResource( 9 )
+
+[node name="StartMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0.25098, 0, 1 )
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+
+[node name="Ecologreen" type="Label" parent="Menu"]
+material = SubResource( 2 )
+margin_right = 984.0
+margin_bottom = 184.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.25098, 0.643137, 0.87451, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "The Ecologreen"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu"]
+margin_top = 188.0
+margin_right = 984.0
+margin_bottom = 372.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CentreLeft" type="CenterContainer" parent="Menu/HBoxContainer"]
+margin_right = 325.0
+margin_bottom = 184.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/HBoxContainer"]
+margin_left = 329.0
+margin_right = 654.0
+margin_bottom = 184.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 25
+alignment = 1
+
+[node name="Play" type="Button" parent="Menu/HBoxContainer/VBoxContainer"]
+margin_right = 325.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 4 )
+text = "Play"
+script = ExtResource( 2 )
+
+[node name="Story " type="Button" parent="Menu/HBoxContainer/VBoxContainer"]
+margin_top = 52.0
+margin_right = 325.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 5 )
+text = "Story ..."
+script = ExtResource( 3 )
+
+[node name="Explanations" type="Button" parent="Menu/HBoxContainer/VBoxContainer"]
+margin_top = 104.0
+margin_right = 325.0
+margin_bottom = 131.0
+custom_fonts/font = SubResource( 6 )
+text = "Explanations"
+script = ExtResource( 4 )
+
+[node name="Quit" type="Button" parent="Menu/HBoxContainer/VBoxContainer"]
+margin_top = 156.0
+margin_right = 325.0
+margin_bottom = 183.0
+custom_fonts/font = SubResource( 7 )
+text = "Quit"
+script = ExtResource( 5 )
+
+[node name="CentreRight" type="CenterContainer" parent="Menu/HBoxContainer"]
+margin_left = 658.0
+margin_right = 984.0
+margin_bottom = 184.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Menu"]
+margin_top = 376.0
+margin_right = 984.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Credits" type="Label" parent="Menu/HBoxContainer2"]
+margin_right = 796.0
+margin_bottom = 184.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 8 )
+text = "The Ecologreen v.1.0.2
+Made with Godot Engine
+Sounds from : bigsoundbank.com"
+valign = 2
+
+[node name="Leaves" type="TextureRect" parent="Menu/HBoxContainer2"]
+material = SubResource( 10 )
+margin_left = 800.0
+margin_right = 984.0
+margin_bottom = 184.0
+rect_min_size = Vector2( 184, 184 )
+size_flags_vertical = 0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="Trunk" type="TextureRect" parent="Menu/HBoxContainer2/Leaves"]
+show_behind_parent = true
+margin_left = 0.2146
+margin_top = 3.21957
+margin_right = 184.215
+margin_bottom = 191.22
+rect_min_size = Vector2( 184, 0 )
+texture = ExtResource( 7 )
+expand = true
+
+[connection signal="pressed" from="Menu/HBoxContainer/VBoxContainer/Play" to="Menu/HBoxContainer/VBoxContainer/Play" method="_on_Play_pressed"]
+[connection signal="pressed" from="Menu/HBoxContainer/VBoxContainer/Story " to="Menu/HBoxContainer/VBoxContainer/Story " method="_on_Explanations_pressed"]
+[connection signal="pressed" from="Menu/HBoxContainer/VBoxContainer/Explanations" to="Menu/HBoxContainer/VBoxContainer/Explanations" method="_on_Button_pressed"]
+[connection signal="pressed" from="Menu/HBoxContainer/VBoxContainer/Quit" to="Menu/HBoxContainer/VBoxContainer/Quit" method="_on_Quit_pressed"]

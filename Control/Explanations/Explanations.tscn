@@ -1,0 +1,93 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Control/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Control/Explanations/ImReady.gd" type="Script" id=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+void vertex() {
+	VERTEX.x += cos(TIME + VERTEX.y + VERTEX.x) * 2.5;
+	VERTEX.y += sin(TIME + VERTEX.y + VERTEX.x) * 2.5;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 1 )
+
+[node name="Explanations" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0.25098, 0, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+material = SubResource( 2 )
+margin_right = 984.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.25098, 0.643137, 0.87451, 1 )
+text = "Explanations"
+align = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 83.0
+margin_right = 984.0
+margin_bottom = 529.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 4 )
+text = "		
+		
+		Dear subject n°5 138,
+
+As a prisoner you have to perform an experiment for the state.
+
+Here is yours. You have been sent to an island in the sky, named \"The Ecologreen\".
+Your objective is to survive there as long as possible without destroying the environment you are living in.
+This test aims to study if humans can survive in the long term in an environment without destroying it.
+
+You do not have oxygen, food or drinkable water inflow, so you have to produce them on your own.
+
+If you die up there because you have detroyed the nature on the island, your test will be a failure.
+
+Good luck !
+
+		-Mr.Leaf
+
+PS : don't try to jump off the island or you will fall indefinitely into the void."
+scroll_active = false
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 533.0
+margin_right = 984.0
+margin_bottom = 560.0
+
+[node name="ImReady" type="Button" parent="VBoxContainer/CenterContainer"]
+margin_left = 441.0
+margin_right = 542.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 5 )
+text = "I'm ready !"
+script = ExtResource( 2 )
+[connection signal="pressed" from="VBoxContainer/CenterContainer/ImReady" to="VBoxContainer/CenterContainer/ImReady" method="_on_ImReady_pressed"]

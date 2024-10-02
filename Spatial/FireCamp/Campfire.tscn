@@ -1,0 +1,137 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Spatial/FireCamp/FireCamp.gd" type="Script" id=1]
+[ext_resource path="res://Spatial/FireCamp/FireCampLog.tres" type="Material" id=2]
+[ext_resource path="res://Spatial/FireCamp/FireCampSound.wav" type="AudioStream" id=3]
+[ext_resource path="res://Spatial/FireCamp/HeatArea.gd" type="Script" id=4]
+
+[sub_resource type="CubeMesh" id=1]
+material = ExtResource( 2 )
+size = Vector3( 1, 0.125, 0.125 )
+
+[sub_resource type="ConvexPolygonShape" id=2]
+points = PoolVector3Array( -0.5, 0.0625, 0.0625, 0.5, 0.0625, -0.0625, 0.5, 0.0625, 0.0625, -0.5, 0.0625, -0.0625, -0.5, -0.0625, 0.0625, 0.5, -0.0625, -0.0625, 0.5, -0.0625, 0.0625, -0.5, -0.0625, -0.0625, 0.5, 0.0625, 0.0625, -0.5, 0.0625, -0.0625, 0.5, 0.0625, -0.0625, -0.5, 0.0625, 0.0625, 0.5, -0.0625, 0.0625, -0.5, -0.0625, -0.0625, 0.5, -0.0625, -0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625, 0.0625, -0.5, -0.0625, 0.0625, -0.5, 0.0625, 0.0625, 0.5, -0.0625, 0.0625, 0.5, 0.0625, -0.0625, -0.5, -0.0625, -0.0625, -0.5, 0.0625, -0.0625, 0.5, -0.0625, -0.0625 )
+
+[sub_resource type="CubeMesh" id=3]
+material = ExtResource( 2 )
+size = Vector3( 1, 0.125, 0.125 )
+
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( -0.5, 0.0625, 0.0625, 0.5, 0.0625, -0.0625, 0.5, 0.0625, 0.0625, -0.5, 0.0625, -0.0625, -0.5, -0.0625, 0.0625, 0.5, -0.0625, -0.0625, 0.5, -0.0625, 0.0625, -0.5, -0.0625, -0.0625, 0.5, 0.0625, 0.0625, -0.5, 0.0625, -0.0625, 0.5, 0.0625, -0.0625, -0.5, 0.0625, 0.0625, 0.5, -0.0625, 0.0625, -0.5, -0.0625, -0.0625, 0.5, -0.0625, -0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625, 0.0625, -0.5, -0.0625, 0.0625, -0.5, 0.0625, 0.0625, 0.5, -0.0625, 0.0625, 0.5, 0.0625, -0.0625, -0.5, -0.0625, -0.0625, -0.5, 0.0625, -0.0625, 0.5, -0.0625, -0.0625 )
+
+[sub_resource type="CubeMesh" id=5]
+material = ExtResource( 2 )
+size = Vector3( 0.125, 0.125, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( -0.0625, 0.0625, 0.5, 0.0625, 0.0625, -0.5, 0.0625, 0.0625, 0.5, -0.0625, 0.0625, -0.5, -0.0625, -0.0625, 0.5, 0.0625, -0.0625, -0.5, 0.0625, -0.0625, 0.5, -0.0625, -0.0625, -0.5, 0.0625, 0.0625, 0.5, -0.0625, 0.0625, -0.5, 0.0625, 0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625, -0.0625, 0.5, -0.0625, -0.0625, -0.5, 0.0625, -0.0625, -0.5, -0.0625, -0.0625, 0.5, 0.0625, 0.0625, 0.5, -0.0625, -0.0625, 0.5, -0.0625, 0.0625, 0.5, 0.0625, -0.0625, 0.5, 0.0625, 0.0625, -0.5, -0.0625, -0.0625, -0.5, -0.0625, 0.0625, -0.5, 0.0625, -0.0625, -0.5 )
+
+[sub_resource type="CubeMesh" id=7]
+material = ExtResource( 2 )
+size = Vector3( 0.125, 0.125, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=8]
+points = PoolVector3Array( -0.0625, 0.0625, 0.5, 0.0625, 0.0625, -0.5, 0.0625, 0.0625, 0.5, -0.0625, 0.0625, -0.5, -0.0625, -0.0625, 0.5, 0.0625, -0.0625, -0.5, 0.0625, -0.0625, 0.5, -0.0625, -0.0625, -0.5, 0.0625, 0.0625, 0.5, -0.0625, 0.0625, -0.5, 0.0625, 0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625, -0.0625, 0.5, -0.0625, -0.0625, -0.5, 0.0625, -0.0625, -0.5, -0.0625, -0.0625, 0.5, 0.0625, 0.0625, 0.5, -0.0625, -0.0625, 0.5, -0.0625, 0.0625, 0.5, 0.0625, -0.0625, 0.5, 0.0625, 0.0625, -0.5, -0.0625, -0.0625, -0.5, -0.0625, 0.0625, -0.5, 0.0625, -0.0625, -0.5 )
+
+[sub_resource type="Gradient" id=9]
+offsets = PoolRealArray( 0.355556 )
+colors = PoolColorArray( 1, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=10]
+gradient = SubResource( 9 )
+
+[sub_resource type="ParticlesMaterial" id=11]
+emission_shape = 1
+emission_sphere_radius = 0.5
+gravity = Vector3( 0, 9.8, 0 )
+angular_velocity = 0.0
+color_ramp = SubResource( 10 )
+
+[sub_resource type="SpatialMaterial" id=12]
+albedo_color = Color( 1, 0.188235, 0, 1 )
+
+[sub_resource type="PrismMesh" id=13]
+material = SubResource( 12 )
+size = Vector3( 0.125, 0.125, 0.125 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 0.5, 0.25, 0.56 )
+
+[sub_resource type="SphereShape" id=15]
+radius = 3.0
+
+[node name="Campfire" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Log 1" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.25 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Log 1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Log 1/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="Log 2" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Log 2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Log 2/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Log 3" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.125, 0 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Log 3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Log 3/StaticBody"]
+shape = SubResource( 6 )
+
+[node name="Log 4" type="MeshInstance" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.125, 0 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Log 4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Log 4/StaticBody"]
+shape = SubResource( 8 )
+
+[node name="Particles" type="Particles" parent="."]
+amount = 32
+process_material = SubResource( 11 )
+draw_pass_1 = SubResource( 13 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
+light_energy = 1.5
+omni_attenuation = 0.153893
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 3 )
+unit_size = 50.0
+autoplay = true
+max_distance = 10.0
+
+[node name="FireArea" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="FireArea"]
+shape = SubResource( 14 )
+
+[node name="HeatArea" type="Area" parent="."]
+input_ray_pickable = false
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="HeatArea"]
+shape = SubResource( 15 )

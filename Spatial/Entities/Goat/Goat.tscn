@@ -1,0 +1,352 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://Spatial/Entities/Goat/Goat.gd" type="Script" id=1]
+[ext_resource path="res://Spatial/Entities/Goat/Goat - Bleating.wav" type="AudioStream" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.4, 0.4, 0.3 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 1, 0.4, 0.5 )
+
+[sub_resource type="SpatialMaterial" id=3]
+
+[sub_resource type="CubeMesh" id=4]
+material = SubResource( 3 )
+size = Vector3( 0.125, 0.5, 0.125 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+
+[sub_resource type="CubeMesh" id=6]
+material = SubResource( 5 )
+size = Vector3( 0.125, 0.062, 0.125 )
+
+[sub_resource type="SpatialMaterial" id=7]
+
+[sub_resource type="CubeMesh" id=8]
+material = SubResource( 7 )
+size = Vector3( 0.25, 0.125, 0.125 )
+
+[sub_resource type="CubeMesh" id=9]
+size = Vector3( 0.15, 0.25, 0.2 )
+
+[sub_resource type="CubeMesh" id=10]
+size = Vector3( 0.25, 0.18, 0.2 )
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+
+[sub_resource type="CubeMesh" id=12]
+material = SubResource( 11 )
+size = Vector3( 0.04, 0.2, 0.04 )
+
+[sub_resource type="SpatialMaterial" id=13]
+albedo_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+
+[sub_resource type="CubeMesh" id=14]
+material = SubResource( 13 )
+size = Vector3( 0.04, 0.2, 0.04 )
+
+[sub_resource type="SpatialMaterial" id=15]
+
+[sub_resource type="CubeMesh" id=16]
+material = SubResource( 15 )
+size = Vector3( 0.025, 0.062, 0.1 )
+
+[sub_resource type="CubeMesh" id=17]
+size = Vector3( 0.025, 0.062, 0.1 )
+
+[sub_resource type="SpatialMaterial" id=18]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CubeMesh" id=19]
+material = SubResource( 18 )
+size = Vector3( 0.04, 0.04, 0.04 )
+
+[sub_resource type="SpatialMaterial" id=20]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CubeMesh" id=21]
+material = SubResource( 20 )
+size = Vector3( 0.04, 0.04, 0.04 )
+
+[sub_resource type="SpatialMaterial" id=22]
+albedo_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+
+[sub_resource type="CubeMesh" id=23]
+material = SubResource( 22 )
+size = Vector3( 0.062, 0.125, 0.062 )
+
+[sub_resource type="SpatialMaterial" id=24]
+albedo_color = Color( 1, 0.411765, 0.705882, 1 )
+
+[sub_resource type="CubeMesh" id=25]
+material = SubResource( 24 )
+size = Vector3( 0.4, 0.062, 0.5 )
+
+[sub_resource type="SpatialMaterial" id=26]
+albedo_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+
+[sub_resource type="CubeMesh" id=27]
+material = SubResource( 26 )
+size = Vector3( 0.062, 0.125, 0.125 )
+
+[sub_resource type="Animation" id=28]
+resource_name = "Walking"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Legs/Leg1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 3.98553 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -25 ), Vector3( 0, 0, -3.41509e-006 ), Vector3( 0, 0, 25 ), Vector3( 0, 0, -3.4151e-006 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Legs/Leg2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 3.98553 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 25 ), Vector3( 0, 0, 3.41509e-006 ), Vector3( 0, 0, -25 ), Vector3( 0, 0, 3.4151e-006 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Legs/Leg3:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 3.98553 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -25 ), Vector3( 0, 0, -3.41509e-006 ), Vector3( 0, 0, 25 ), Vector3( 0, 0, -1.28066e-006 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Legs/Leg4:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 3.98553 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 25 ), Vector3( 0, 0, 3.41509e-006 ), Vector3( 0.896, 3.921, -25 ), Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "Eating"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Head:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 65 ), Vector3( 0, 0, 55 ), Vector3( 0, 0, 65 ), Vector3( 0, 0, 0 ) ]
+}
+
+[node name="Goat" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0 )
+shape = SubResource( 1 )
+
+[node name="BodyMesh" type="Spatial" parent="."]
+
+[node name="Belly" type="MeshInstance" parent="BodyMesh"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Legs" type="Spatial" parent="BodyMesh"]
+editor/display_folded = true
+
+[node name="Leg1" type="Spatial" parent="BodyMesh/Legs"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, -0.15, -0.15 )
+
+[node name="Leg" type="MeshInstance" parent="BodyMesh/Legs/Leg1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="Hoof" type="MeshInstance" parent="BodyMesh/Legs/Leg1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.530051, 0 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="Leg2" type="Spatial" parent="BodyMesh/Legs"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, -0.15, 0.15 )
+
+[node name="Leg" type="MeshInstance" parent="BodyMesh/Legs/Leg2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="Hoof" type="MeshInstance" parent="BodyMesh/Legs/Leg2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.530051, 0 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="Leg3" type="Spatial" parent="BodyMesh/Legs"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -0.15, 0.15 )
+
+[node name="Leg" type="MeshInstance" parent="BodyMesh/Legs/Leg3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="Hoof" type="MeshInstance" parent="BodyMesh/Legs/Leg3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.530051, 0 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="Leg4" type="Spatial" parent="BodyMesh/Legs"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -0.15, -0.15 )
+
+[node name="Leg" type="MeshInstance" parent="BodyMesh/Legs/Leg4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="Hoof" type="MeshInstance" parent="BodyMesh/Legs/Leg4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.530051, 0 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="Head" type="Spatial" parent="BodyMesh"]
+editor/display_folded = true
+
+[node name="Neck" type="MeshInstance" parent="BodyMesh/Head"]
+transform = Transform( 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0, 1, -0.5, 0.25, 0 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="Face" type="Spatial" parent="BodyMesh/Head"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.625, 0.375, 0 )
+
+[node name="HeadB" type="MeshInstance" parent="BodyMesh/Head/Face"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.062, 0.062, 0 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="HeadS" type="MeshInstance" parent="BodyMesh/Head/Face"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.063, 0, 0 )
+mesh = SubResource( 10 )
+material/0 = null
+
+[node name="Horn1" type="MeshInstance" parent="BodyMesh/Head/Face"]
+transform = Transform( 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 0, 0, 1, 0.125, 0.25, -0.07 )
+mesh = SubResource( 12 )
+material/0 = null
+
+[node name="Horn2" type="MeshInstance" parent="BodyMesh/Head/Face"]
+transform = Transform( 0.819152, 0.573577, 0, -0.573577, 0.819152, 0, 0, 0, 1, 0.125, 0.25, 0.07 )
+mesh = SubResource( 14 )
+material/0 = null
+
+[node name="Ear1" type="MeshInstance" parent="BodyMesh/Head/Face"]
+transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.1, 0.15, 0.135 )
+mesh = SubResource( 16 )
+material/0 = null
+
+[node name="Ear2" type="MeshInstance" parent="BodyMesh/Head/Face"]
+transform = Transform( 1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0.1, 0.15, -0.135 )
+mesh = SubResource( 17 )
+material/0 = null
+
+[node name="Eye1" type="MeshInstance" parent="BodyMesh/Head/Face"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0.062 )
+mesh = SubResource( 19 )
+material/0 = null
+
+[node name="Eye2" type="MeshInstance" parent="BodyMesh/Head/Face"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, -0.062 )
+mesh = SubResource( 21 )
+material/0 = null
+
+[node name="Beard" type="MeshInstance" parent="BodyMesh/Head/Face"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, -0.125, 0 )
+mesh = SubResource( 23 )
+material/0 = null
+
+[node name="Udder" type="MeshInstance" parent="BodyMesh"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.231, 0 )
+mesh = SubResource( 25 )
+material/0 = null
+
+[node name="Tail" type="MeshInstance" parent="BodyMesh"]
+transform = Transform( 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, 0.514668, 0.236359, 0 )
+mesh = SubResource( 27 )
+material/0 = null
+
+[node name="Walking" type="AnimationPlayer" parent="BodyMesh"]
+playback_speed = 3.0
+anims/Walking = SubResource( 28 )
+
+[node name="Eating" type="AnimationPlayer" parent="BodyMesh"]
+anims/Eating = SubResource( 29 )
+
+[node name="RayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.625, 0 )
+enabled = true
+cast_to = Vector3( -1, 0, 0 )
+
+[node name="OnWater" type="RayCast" parent="."]
+transform = Transform( 1, 8.9407e-008, 0, -8.9407e-008, 1, 0, 0, 0, 1, -0.5, 0, 0 )
+enabled = true
+cast_to = Vector3( 0, -2, 0 )
+
+[node name="MovingTime" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="Walking" type="Timer" parent="MovingTime"]
+one_shot = true
+
+[node name="Rotating" type="Timer" parent="MovingTime"]
+one_shot = true
+
+[node name="Idling" type="Timer" parent="MovingTime"]
+one_shot = true
+
+[node name="HeadRayCasts" type="Spatial" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0.375, 0 )
+
+[node name="RayCastWall" type="RayCast" parent="HeadRayCasts"]
+transform = Transform( -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 0, 0, 1, 0.38354, 0, 0 )
+enabled = true
+
+[node name="RayCastVoid" type="RayCast" parent="HeadRayCasts"]
+transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 0, -0.125, 0 )
+enabled = true
+cast_to = Vector3( -10, 0, 0 )
+
+[node name="Satiety" type="Timer" parent="."]
+one_shot = true
+
+[node name="Bleating" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, 0 )
+stream = ExtResource( 2 )
+
+[node name="NextBleat" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="NextBleat" to="." method="_on_NextBleat_timeout"]

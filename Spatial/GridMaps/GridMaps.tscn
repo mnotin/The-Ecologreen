@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Spatial/MeshLibraries/SolidMeshLibrary/SolidMeshLibrary.meshlib" type="MeshLibrary" id=1]
+[ext_resource path="res://Spatial/GridMaps/SolidGridMap.gd" type="Script" id=2]
+[ext_resource path="res://Spatial/GridMaps/GenerateVegetation.gd" type="Script" id=3]
+[ext_resource path="res://Spatial/MeshLibraries/DebugMeshLibrary/DebugMeshLibrary.meshlib" type="MeshLibrary" id=4]
+[ext_resource path="res://Spatial/GridMaps/DebugGridMap.gd" type="Script" id=5]
+[ext_resource path="res://Spatial/GridMaps/GasGridMap.gd" type="Script" id=6]
+[ext_resource path="res://Spatial/MeshLibraries/LiquidMeshLibrary/LiquidMeshLibrary.meshlib" type="MeshLibrary" id=7]
+[ext_resource path="res://Spatial/GridMaps/LiquidGridMap.gd" type="Script" id=8]
+
+[node name="GridMaps" type="Spatial"]
+
+[node name="SolidGridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 1, 1, 1 )
+data = {
+"cells": PoolIntArray(  )
+}
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="GenerateVegetation" type="Node" parent="SolidGridMap"]
+script = ExtResource( 3 )
+
+[node name="DebugGridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 4 )
+cell_size = Vector3( 1, 1, 1 )
+data = {
+"cells": PoolIntArray(  )
+}
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_clip_": 0
+}
+
+[node name="GasGridMap" type="GridMap" parent="."]
+cell_size = Vector3( 1, 1, 1 )
+data = {
+"cells": PoolIntArray(  )
+}
+script = ExtResource( 6 )
+__meta__ = {
+"_editor_clip_": 0
+}
+
+[node name="LiquidGridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 7 )
+cell_size = Vector3( 1, 1, 1 )
+data = {
+"cells": PoolIntArray(  )
+}
+script = ExtResource( 8 )
+__meta__ = {
+"_editor_clip_": 0
+}
